@@ -25,6 +25,10 @@ group :development, :test do
   gem 'spring'
   gem 'guard'
   gem 'guard-rspec'
+  gem 'shoulda'
+  gem 'rspec-collection_matchers'
+  gem 'devise'
+  gem 'omniauth-facebook'
 
   group :test do
     gem 'rspec-rails'
