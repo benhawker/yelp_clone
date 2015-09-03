@@ -31,6 +31,10 @@ feature 'restaurants' do
       expect(current_path).to eq '/restaurants'
     end
 
+    scenario "cannot be created without being signed-in" do
+      expect{ Restaurant.create(name: "KFC")}.not_to change{Restaurant.count}
+    end
+
     context 'an invalid restaurant' do
       it 'does not let you submit a name that is too short' do
         visit '/restaurants'
